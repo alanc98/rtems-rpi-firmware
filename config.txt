@@ -1,4 +1,5 @@
-# gpu_mem=16
-# arm_control=0x1000
+# the enable_uart=1 option allows the RTEMS images to boot on the RPI Zero W and RPI 3.
+enable_uart=1
+# the uart_2ndstage=1 option enables debug output from the firmware
 uart_2ndstage=1
 kernel_address=0x200000
