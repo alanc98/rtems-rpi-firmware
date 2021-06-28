@@ -9,3 +9,16 @@ uart_2ndstage=1
 
 # kernel_address=0x200000 is needed for RTEMS - see the raspberrypi linkscript
 kernel_address=0x200000
+
+# By default the firmware will boot an image called kernel.img on the single core
+#  models. This is what you should name your raspberrypi BSP images. The image
+#  format is a stripped binary. Example:
+#  arm-rtems6-objcopy -Obinary ticker.exe kernel.img
+#
+# The rasperrypi2 and 3 will boot an image called kernel7.img
+#  That is the name for the raspberrypi2 BSP images.
+#
+# You can specify the image that will be booted with the kernel= option here:
+# kernel=ticker.bin 
+# again, the image must be a stripped binary)
+
