@@ -1,6 +1,11 @@
-# the enable_uart=1 option allows the RTEMS images to boot on the RPI Zero W and RPI 3.
-enable_uart=1
-# the uart_2ndstage=1 option enables debug output from the firmware
+# The following option disables the on-board bluetooth module, which allows RTEMS to use the console
+#   on the Raspberry Pi Zero W and Raspberry Pi 3 models.  
+dtoverlay=disable-bt
+
+# The uart_2ndstage=1 option enables debug output from the firmware
+#   This debug info is useful to see what device trees and kernel the boot loader is 
+#   attempting to boot. 
 uart_2ndstage=1
+
 # kernel_address=0x200000 is needed for RTEMS - see the raspberrypi linkscript
 kernel_address=0x200000
